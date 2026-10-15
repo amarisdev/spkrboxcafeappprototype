@@ -8,38 +8,31 @@
 import SwiftUI
 
 struct MenuItemCard: View {
-    let imageName: String
-    let title: String
-    let price: String
+    let item: MenuItem
+    
     var body: some View {
-        VStack (spacing: 4) {
-            Image(imageName) // Use SystemName, SF Symbols, or Assets
+        VStack(spacing: 6) {
+            Image(item.imageName)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 90, height: 90)
-                .cornerRadius(12)
-                .overlay(
-            RoundedRectangle(cornerRadius: 12) .stroke(Color.white, lineWidth: 2)
-                )
-            Text(title)
-                .font(.caption)
-                .bold()
-                .foregroundColor(.white)
-            Text(price)
-                .font(.caption2)
-                .bold()
-                .padding (.horizontal, 8)
-                .padding(.vertical, 2)
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(6)
+                .frame(width: 100, height: 100)
+                .cornerRadius(16)
+                .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.white, lineWidth: 2))
             
-        
-        
+            Text(item.name)
+                .font(.system(size: 13, weight: .bold))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .frame(height: 32)
+            
+            Text(String(format: "$%.2f", item.price))
+                .font(.system(size: 14, weight: .black))
+                .foregroundColor(.white)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 4)
+                .background(Color(red: 0.7, green: 0.05, blue: 0.1))
+                .cornerRadius(8)
         }
     }
-}
-
-#Preview {
-    MenuItemCard(imageName: "coffee", title: "Coffee (12oz)", price: "$5.00")
 }

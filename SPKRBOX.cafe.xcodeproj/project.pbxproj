@@ -6,8 +6,13 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		410B462830817E1A00749BD8 /* SpkrboxTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B462730817E1A00749BD8 /* SpkrboxTheme.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* SPKRBOX.cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPKRBOX.cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		410B462730817E1A00749BD8 /* SpkrboxTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpkrboxTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +35,7 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				410B462730817E1A00749BD8 /* SpkrboxTheme.swift */,
 				000000000000000000000010 /* SPKRBOX.cafe */,
 				000000000000000000000020 /* Products */,
 			);
@@ -110,6 +116,7 @@
 		000000000000000120000000 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				410B462830817E1A00749BD8 /* SpkrboxTheme.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
